@@ -22,6 +22,7 @@ void	PhoneBook::addContact( void )
 
 	this->_contacts[i % 8].saveContact();
 	this->_contacts[i % 8].setIndex(i % 8);
+	i++;
 }
 
 void	PhoneBook::showContacts( void )

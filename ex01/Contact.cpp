@@ -12,7 +12,7 @@ std::string	getInput(std::string str)
 	{
 		std::cout << str;
 		std::cin >> input;
-		if (!input.empty())
+		if (std::cin.good() && !input.empty())
 			valid = true;
 		else
 		{
