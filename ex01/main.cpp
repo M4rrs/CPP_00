@@ -4,7 +4,7 @@ int main( void )
 {
 	PhoneBook phone;
 
-	std::string input = NULL; //to store input from cin
+	std::string input = ""; //to store input from cin
 	phone.welcome();
 	while (input.compare("EXIT"))
 	{

@@ -9,4 +9,18 @@ INC = Contact.hpp PhoneBook.hpp
 
 OBJS = ${SRCS:%.cpp=%.o}
 
+%.o: %.cpp ${INC}
+	@${CC} ${FLAGS} -c $< -o $@
 
+all: ${NAME}
+
+${NAME}: ${OBJS}
+	@${CC} ${FLAGS} ${OBJS} -o $@
+
+clean:
+	${RM} ${OBJS}
+
+fclean:	clean
+	${RM} ${NAME}
+
+re: fclean all

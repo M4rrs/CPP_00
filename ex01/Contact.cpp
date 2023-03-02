@@ -13,10 +13,7 @@ std::string	getInput(std::string str)
 		std::cout << str;
 		std::cin >> input;
 		if (!input.empty())
-		{
 			valid = true;
-			return ;
-		}
 		else
 		{
 			std::cin.clear();
@@ -50,10 +47,18 @@ void	Contact::setIndex( int i )
 
 void	Contact::printContact( void )
 {
-	std::cout << "|" << std::setw(10) << index << std::flush;
+	std::cout << "|" << std::setw(10) << this->_index << std::flush;
 	std::cout << "|" << std::setw(10) << trunc(this->_firstName) << std::flush;
 	std::cout << "|" << std::setw(10) << trunc(this->_lastName) << std::flush;
 	std::cout << "|" << std::setw(10) << trunc(this->_nickname) << std::flush;
 	std::cout << "|" << std::setw(10) << trunc(this->_phoneNumber) << std::flush;
 	std::cout << std::endl;
+}
+
+void	Contact::displayContact( int i )
+{
+	std::cout << std::endl;
+	std::cout << "========== CONTACT " << i << " ==========" << std::flush;
+	std::cout << std::endl; 
+	std::cout << std::left << std::setw(10) << "First Name:" << std::endl;
 }

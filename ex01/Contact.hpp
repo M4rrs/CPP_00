@@ -19,6 +19,7 @@ class Contact {
 		void	saveContact( void );
 		void	setIndex( int i );
 		void	printContact( void );
+		void	displayContact( int i );
 };
 
 #endif
