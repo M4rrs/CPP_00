@@ -11,6 +11,9 @@ class PhoneBook{
 		PhoneBook();
 		~PhoneBook();
 		void welcome( void );
+		void addContact( void );
+		void showContacts( void );
+		void searchContact( void );
 }
 
 #endif
