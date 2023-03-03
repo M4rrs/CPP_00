@@ -16,8 +16,7 @@ int main( void )
 				phone.searchContact();	
 		}
 		std::cout << "> ";
-		std::cin >> input;
+		std::getline(std::cin, input);
 	}
-
 	return (0);
 }

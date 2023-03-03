@@ -41,18 +41,11 @@ void	Contact::saveContact( void )
 	this->_phoneNumber = this->_getInput("Phone Number:\t");
 	this->_darkestSecret = this->_getInput("Darkest Secret:\t");
 	std::cout << std::endl;
-
-	std::cout << "[" << this->_firstName << "]" << std::endl;
-	std::cout << "[" << this->_lastName << "]" << std::endl;
-	std::cout << "[" << this->_nickname << "]" << std::endl;
-	std::cout << "[" << this->_phoneNumber << "]" << std::endl;
-	std::cout << "[" << this->_darkestSecret << "]" << std::endl;
 }
 
 void	Contact::setIndex( int i )
 {
 	this->_index = i + 1;
-	std::cout << "[" << this->_index << "]" << std::endl;
 }
 
 void	Contact::printContact( void )
@@ -73,11 +66,15 @@ int	Contact::isEmpty( void )
 	return (0);
 }
 
-void	Contact::displayContact( void )
+void	Contact::displayContact( void ) const
 {
-	std::cout << "=====\tCONTACT " << this->_index << "\t=====\n" << std::flush;
-	std::cout << std::left << std::setw(10) << "First Name" << ":\t" << this->_firstName << std::flush;
+	std::cout << "==========\tCONTACT " << this->_index << "\t==========\n" << std::flush;
+	std::cout << std::left << std::setw(15) << "First Name" << ":\t" << this->_firstName << std::flush;
 	std::cout << std::endl;
-	std::cout << std::left << std::setw(10) << "Last Name" << ":\t" << this->_lastName << std::flush;
+	std::cout << std::left << std::setw(15) << "Last Name" << ":\t" << this->_lastName << std::flush;
+	std::cout << std::endl;
+	std::cout << std::left << std::setw(15) << "Nickname" << ":\t" << this->_nickname << std::flush;
+	std::cout << std::endl;
+	std::cout << std::left << std::setw(15) << "Phone Number" << ":\t" << this->_phoneNumber << std::flush;
 	std::cout << std::endl;
 }

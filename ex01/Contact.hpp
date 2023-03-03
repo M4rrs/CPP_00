@@ -23,7 +23,7 @@ class Contact {
 		void	setIndex( int i );
 		void	printContact( void );
 		int		isEmpty( void );
-		void	displayContact( void );
+		void	displayContact( void ) const;
 };
 
 #endif

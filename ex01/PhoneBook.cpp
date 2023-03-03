@@ -3,7 +3,7 @@
 PhoneBook::PhoneBook() {}
 PhoneBook::~PhoneBook() {}
 
-
+/*============	 PUBLIC	============*/
 void	PhoneBook::welcome( void )
 {
 	std::cout << std::endl;
@@ -58,9 +58,8 @@ int	readInput( void )
 	return (i);
 }
 
-void	PhoneBook::searchContact( void )
+void	PhoneBook::searchContact( void ) const
 {
 	int i = readInput();
-	std::cout << "search contact index:" << i << std::endl;
 	this->_contacts[i - 1].displayContact();
 }
