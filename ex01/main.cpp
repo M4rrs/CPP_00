@@ -13,7 +13,7 @@ int main( void )
 		else if (!input.compare("SEARCH"))
 		{
 			phone.showContacts();
-			phone.searchContact();
+			// phone.searchContact();
 		}
 		std::cout << "> ";
 		std::cin >> input;

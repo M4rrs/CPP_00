@@ -12,14 +12,17 @@ class Contact {
 		std::string _phoneNumber;
 		std::string _darkestSecret;
 		int _index;
+		std::string	_getInput(std::string str);
+		std::string	_trunc(std::string str);
+
 
 	public:
 		Contact();
 		~Contact();
 		void	saveContact( void );
 		void	setIndex( int i );
-		void	printContact( void );
-		void	displayContact( int i );
+		void	printContact( int i );
+		// void	displayContact( int i );
 };
 
 #endif

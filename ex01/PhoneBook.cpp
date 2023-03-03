@@ -28,8 +28,8 @@ void	PhoneBook::addContact( void )
 void	PhoneBook::showContacts( void )
 {
 	std::cout << "Your Contacts:" << std::endl;
-	for (int i = 1; i <= 8; i++)
-		this->_contacts[i].printContact();
+	for (int i = 0; i < 8; i++)
+		this->_contacts[i].printContact(i);
 	std::cout << std::endl;
 }
 
@@ -52,8 +52,8 @@ int	readInput( void )
 	return i;
 }
 
-void	PhoneBook::searchContact( void )
-{
-	int i = readInput();
-	this->_contacts[i].displayContact(i);
-}
+// void	PhoneBook::searchContact( void )
+// {
+// 	int i = readInput();
+// 	this->_contacts[i].displayContact(i);
+// }
