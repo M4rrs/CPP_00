@@ -1,6 +1,6 @@
 NAME = PhoneBook
 CC = c++
-FLAGS = -Wall -Werror -Wextra -I -std=c++98
+FLAGS = -Wall -Werror -Wextra -I -std=c++98 -fsanitize=address
 
 RM = rm -rf
 

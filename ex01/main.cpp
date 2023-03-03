@@ -12,8 +12,8 @@ int main( void )
 			phone.addContact();
 		else if (!input.compare("SEARCH"))
 		{
-			phone.showContacts();
-			// phone.searchContact();
+			if (!phone.showContacts())
+				phone.searchContact();	
 		}
 		std::cout << "> ";
 		std::cin >> input;

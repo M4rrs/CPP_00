@@ -25,17 +25,23 @@ void	PhoneBook::addContact( void )
 	i++;
 }
 
-void	PhoneBook::showContacts( void )
+int	PhoneBook::showContacts( void )
 {
 	std::cout << "Your Contacts:" << std::endl;
+	if (this->_contacts[0].isEmpty())
+	{
+		std::cout << "\n\tNO SAVED CONTACTS\t\n" << std::endl;
+		return (1);
+	}
 	for (int i = 0; i < 8; i++)
-		this->_contacts[i].printContact(i);
+		this->_contacts[i].printContact();
 	std::cout << std::endl;
+	return (0);
 }
 
 int	readInput( void )
 {
-	int i = 0;
+	int i;
 	bool valid = false;
 	while (!valid)
 	{
@@ -49,11 +55,12 @@ int	readInput( void )
 			std::cout << "Invalid index; Please try again." << std::endl;
 		}
 	}
-	return i;
+	return (i);
 }
 
-// void	PhoneBook::searchContact( void )
-// {
-// 	int i = readInput();
-// 	this->_contacts[i].displayContact(i);
-// }
+void	PhoneBook::searchContact( void )
+{
+	int i = readInput();
+	std::cout << "search contact index:" << i << std::endl;
+	this->_contacts[i - 1].displayContact();
+}

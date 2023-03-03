@@ -21,8 +21,9 @@ class Contact {
 		~Contact();
 		void	saveContact( void );
 		void	setIndex( int i );
-		void	printContact( int i );
-		// void	displayContact( int i );
+		void	printContact( void );
+		int		isEmpty( void );
+		void	displayContact( void );
 };
 
 #endif

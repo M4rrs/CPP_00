@@ -3,6 +3,7 @@
 Contact::Contact() {}
 Contact::~Contact() {}
 
+/*============	 PRIVATE	============*/
 std::string	Contact::_getInput(std::string str)
 {
 	std::string input = "";
@@ -30,6 +31,7 @@ std::string	Contact::_trunc(std::string str)
 	return str;
 }
 
+/*============	 PUBLIC	============*/
 void	Contact::saveContact( void )
 {
 	std::cin.ignore();
@@ -49,17 +51,33 @@ void	Contact::saveContact( void )
 
 void	Contact::setIndex( int i )
 {
-	this->_index = i;
+	this->_index = i + 1;
 	std::cout << "[" << this->_index << "]" << std::endl;
 }
 
-void	Contact::printContact( int i )
+void	Contact::printContact( void )
 {
 	if (this->_firstName.empty() || this->_lastName.empty() || this->_nickname.empty())
 		return ;
-	std::cout << "|" << std::setw(10) << i << std::flush;
+	std::cout << "|" << std::setw(10) << this->_index << std::flush;
 	std::cout << "|" << std::setw(10) << this->_trunc(this->_firstName) << std::flush;
 	std::cout << "|" << std::setw(10) << this->_trunc(this->_lastName) << std::flush;
 	std::cout << "|" << std::setw(10) << this->_trunc(this->_nickname) << std::flush;
 	std::cout << "|" << std::endl;
+}
+
+int	Contact::isEmpty( void )
+{
+	if (this->_firstName.empty() || this->_lastName.empty() || this->_nickname.empty())
+		return (1);
+	return (0);
+}
+
+void	Contact::displayContact( void )
+{
+	std::cout << "=====\tCONTACT " << this->_index << "\t=====\n" << std::flush;
+	std::cout << std::left << std::setw(10) << "First Name" << ":\t" << this->_firstName << std::flush;
+	std::cout << std::endl;
+	std::cout << std::left << std::setw(10) << "Last Name" << ":\t" << this->_lastName << std::flush;
+	std::cout << std::endl;
 }
