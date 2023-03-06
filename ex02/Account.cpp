@@ -3,6 +3,11 @@
 #include <iomanip>
 #include <ctime>
 
+int	Account::_nbAccounts = 0;
+int	Account::_totalAmount = 0;
+int	Account::_totalNbDeposits = 0;
+int	Account::_totalNbWithdrawals = 0;
+
 /*============	 CONSTRUCTOR	============*/
 Account::Account( int initial_deposit ) {
 	_amount = initial_deposit;
@@ -102,8 +107,8 @@ bool	Account::makeWithdrawal( int withdrawal)
 	}
 	_amount -= withdrawal;
 	_totalAmount -= withdrawal;
-	_nbWithdrawals--;
-	_totalNbWithdrawals--;
+	_nbWithdrawals++;
+	_totalNbWithdrawals++;
 	std::cout << withdrawal << " | Amount: " << _amount << " | Withdrawals: " << _nbWithdrawals << std::endl;
 	return true;
 }
