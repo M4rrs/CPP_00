@@ -102,7 +102,7 @@ bool	Account::makeWithdrawal( int withdrawal)
 			<< std::flush;
 	if (withdrawal > _amount)
 	{
-		std::cout << "REFUSED" << std::endl;
+		std::cout << "\033[31mREFUSED\033[0m" << std::endl;
 		return false;
 	}
 	_amount -= withdrawal;
