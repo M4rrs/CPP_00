@@ -17,15 +17,15 @@ Account::Account( int initial_deposit ) {
 	_nbWithdrawals = 0;
 	_totalAmount += initial_deposit;
 	_displayTimestamp();
-	std::cout << "Index: " << _accountIndex << " | Amount: " << _amount
-			<< " | Created" << std::endl;
+	std::cout << "\033[32mIndex: " << _accountIndex << " | Amount: " << _amount
+			<< " | Created\033[0m" << std::endl;
 }
 
 /*============	 DESTRUCTOR	============*/
 Account::~Account() {
 	_displayTimestamp();
-	std::cout << "Index: " << _accountIndex << " | Amount: " << _amount
-			<< " | Closed" << std::endl;
+	std::cout << "\033[33mIndex: " << _accountIndex << " | Amount: " << _amount
+			<< " | Closed\033[0m" << std::endl;
 }
 
 /*============	 PRIVATE	============*/
@@ -65,9 +65,9 @@ int	Account::getNbWithdrawals( void )
 void	Account::displayAccountsInfos( void ) 
 {
 	_displayTimestamp();
-	std::cout << "Accounts: " << getNbAccounts() << " | Total: " << getTotalAmount()
+	std::cout << "\033[34;1mAccounts: " << getNbAccounts() << " | Total: " << getTotalAmount()
 			<< " | Deposits: " << getNbDeposits() << " | Withdrawals: " << getNbWithdrawals()
-			<< std::endl;
+			<< "\033[0m" << std::endl;
 }
 
 // index, amount, deposits, withdrawal.
@@ -102,7 +102,7 @@ bool	Account::makeWithdrawal( int withdrawal)
 			<< std::flush;
 	if (withdrawal > _amount)
 	{
-		std::cout << "\033[31mREFUSED\033[0m" << std::endl;
+		std::cout << "\033[31;1mREFUSED\033[0m" << std::endl;
 		return false;
 	}
 	_amount -= withdrawal;
