@@ -17,6 +17,8 @@ int main( void )
 		}
 		std::cout << "> ";
 		std::getline(std::cin, input);
+		for (int i = 0; input[i]; i++)
+			input[i] = toupper(input[i]);
 	}
 	return (0);
 }

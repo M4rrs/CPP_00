@@ -54,6 +54,7 @@ int	readInput( void )
 			std::cin.clear();
 			std::cout << "Invalid index; Please try again." << std::endl;
 		}
+		std::cin.ignore();
 	}
 	return (i);
 }

@@ -34,7 +34,6 @@ std::string	Contact::_trunc(std::string str)
 /*============	 PUBLIC	============*/
 void	Contact::saveContact( void )
 {
-	std::cin.ignore();
 	this->_firstName = this->_getInput("First Name:\t");
 	this->_lastName = this->_getInput("Last Name:\t");
 	this->_nickname = this->_getInput("Nickname:\t");
@@ -68,6 +67,11 @@ int	Contact::isEmpty( void )
 
 void	Contact::displayContact( void ) const
 {
+	if (this->_firstName.empty() || this->_lastName.empty() || this->_nickname.empty())
+	{
+		std::cout << "\n\tCONTACT UNAVAILABLE\t\n" << std::endl;
+		return ;
+	}
 	std::cout << "==========\tCONTACT " << this->_index << "\t==========\n" << std::flush;
 	std::cout << std::left << std::setw(15) << "First Name" << ":\t" << this->_firstName << std::flush;
 	std::cout << std::endl;
