@@ -39,7 +39,6 @@ void	Contact::saveContact( void )
 	this->_nickname = this->_getInput("Nickname:\t");
 	this->_phoneNumber = this->_getInput("Phone Number:\t");
 	this->_darkestSecret = this->_getInput("Darkest Secret:\t");
-	std::cout << std::endl;
 }
 
 void	Contact::setIndex( int i )
@@ -69,10 +68,10 @@ void	Contact::displayContact( void ) const
 {
 	if (this->_firstName.empty() || this->_lastName.empty() || this->_nickname.empty())
 	{
-		std::cout << "\n\tCONTACT UNAVAILABLE\t\n" << std::endl;
+		std::cout << "\033[31m\n\tCONTACT UNAVAILABLE\t\n\033[0m" << std::endl;
 		return ;
 	}
-	std::cout << "==========\tCONTACT " << this->_index << "\t==========\n" << std::flush;
+	std::cout << "\033[37;1m==========\tCONTACT " << this->_index << "\t==========\n\033[0m" << std::flush;
 	std::cout << std::left << std::setw(15) << "First Name" << ":\t" << this->_firstName << std::flush;
 	std::cout << std::endl;
 	std::cout << std::left << std::setw(15) << "Last Name" << ":\t" << this->_lastName << std::flush;

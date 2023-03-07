@@ -7,11 +7,11 @@ PhoneBook::~PhoneBook() {}
 void	PhoneBook::welcome( void )
 {
 	std::cout << std::endl;
-	std::cout << "Welcome to your PhoneBook! Please input a command:" << std::endl;
+	std::cout << "\033[35;1mWelcome to your PhoneBook! Please input a command:\033[0m" << std::endl;
 	std::cout << std::endl;
-	std::cout << "[ ADD ]\t\tAdd a new contact" << std::endl;
-	std::cout << "[ SEARCH ]\tSearch for an existing contact" << std::endl;
-	std::cout << "[ EXIT ]\tExit PhoneBook. \033[38;5;1mWARNING: Exiting the PhoneBook will delete all existing contacts\033[0m"
+	std::cout << "[ \033[37;1mADD\033[0m ]\t\tAdd a new contact" << std::endl;
+	std::cout << "[ \033[37;1mSEARCH\033[0m ]\tSearch for an existing contact" << std::endl;
+	std::cout << "[ \033[37;1mEXIT\033[0m ]\tExit PhoneBook. \033[38;5;1mWARNING: Exiting the PhoneBook will delete all existing contacts\033[0m"
 			<< std::endl;
 	std::cout << std::endl;
 }
@@ -27,10 +27,10 @@ void	PhoneBook::addContact( void )
 
 int	PhoneBook::showContacts( void )
 {
-	std::cout << "Your Contacts:" << std::endl;
+	std::cout << "\033[37;1mYour Contacts:\033[0m" << std::endl;
 	if (this->_contacts[0].isEmpty())
 	{
-		std::cout << "\n\tNO SAVED CONTACTS\t\n" << std::endl;
+		std::cout << "\033[31m\n\tNO SAVED CONTACTS\t\n\033[0m" << std::endl;
 		return (1);
 	}
 	for (int i = 0; i < 8; i++)
