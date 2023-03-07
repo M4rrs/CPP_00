@@ -3,6 +3,10 @@
 An introduction to the basics of C++. Relatively simple, the same way the Piscine C00 was simple.
 You'll learn basic C++ syntax, namespaces, classes, members, and a few other concepts. There are only 3 exercises in this module.
 
+* [Exercise 00](#exercise-00-megaphone)
+* [Exercise 01](#exercise-01-phonebook)
+* [Exercise 02](#exercise-02-account)
+
 ## Exercise 00: Megaphone
 Toupper(), but in a program. The program takes in your argument, coverts it to all capitals, and prints the output to the terminal. 
 
@@ -27,3 +31,8 @@ name and nickname.
 
 ## Exercise 02: Account
 This one seemed a bit tricky at first. But if you look closely at the log file, it's not too hard at all.
+* The header file (Account.hpp) provides you with the variable and function prototypes that you may need.
+* You must create Account.cpp in order to print out a log similar to the log file given.
+* I don't think it's absolute necessary for it to be printed out EXACTLY the same, meaning you can clean up the design if you want. As long as the output (amounts etc) are the same.
+
+![account](https://cdn.discordapp.com/attachments/989407433858375683/1082522486018682940/Screenshot_2023-03-07_at_12.37.26.png)
