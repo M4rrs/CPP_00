@@ -15,4 +15,10 @@ Creating a simple phonebook. It's up to you how pretty you want it to look. But 
 * On start-up the phonebook is empty, and user is prompted to enter one of three commands:
 	* [ ADD ] : Save a new contact.
 		* The contact fields are: first name, last name, nickname, phone number, and
-darkest secret. A saved contact can’t have empty fields.
+darkest secret.
+	* [ SEARCH ] : Search for a specific contact.
+		* Display the saved contacts as a list of 4 columns: index, first name, last
+name and nickname.
+		* Prompt the user again for the index of the entry to display.
+		* Display the contact information, one field per line.
+	* [ EXIT ] : Exit the program.
