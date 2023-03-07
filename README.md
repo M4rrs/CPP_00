@@ -22,3 +22,8 @@ name and nickname.
 		* Prompt the user again for the index of the entry to display.
 		* Display the contact information, one field per line.
 	* [ EXIT ] : Exit the program.
+
+![phonebook](https://cdn.discordapp.com/attachments/989407433858375683/1082519733410201611/Screenshot_2023-03-07_at_12.26.49.png)
+
+## Exercise 02: Account
+This one seemed a bit tricky at first. But if you look closely at the log file, it's not too hard at all.
